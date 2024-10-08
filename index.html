@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts para uma tipografia moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <!-- Logotipo Simples em CSS -->
+                <span class="logo-icon">💳</span>
+                <h1>Sistema Bancário</h1>
+            </div>
+        </header>
+        <nav class="menu">
+            <button onclick="mostrarMenu('criarConta')" class="menu-button">Criar Conta</button>
+            <button onclick="mostrarMenu('depositar')" class="menu-button">Depositar</button>
+            <button onclick="mostrarMenu('sacar')" class="menu-button">Sacar</button>
+            <button onclick="mostrarMenu('consultarSaldo')" class="menu-button">Consultar Saldo</button>
+            <button onclick="listarContas()" class="menu-button">Listar Contas</button>
+        </nav>
+        <main>
+            <div class="form-container" id="criarConta">
+                <h2>Criar Nova Conta</h2>
+                <input type="text" id="titular" placeholder="Nome do Titular">
+                <button onclick="criarConta()" class="action-button">Criar Conta</button>
+            </div>
+            <div class="form-container" id="depositar">
+                <h2>Depositar</h2>
+                <input type="number" id="numeroContaDeposito" placeholder="Número da Conta">
+                <input type="number" id="valorDeposito" placeholder="Valor do Depósito">
+                <button onclick="depositar()" class="action-button">Depositar</button>
+            </div>
+            <div class="form-container" id="sacar">
+                <h2>Sacar</h2>
+                <input type="number" id="numeroContaSaque" placeholder="Número da Conta">
+                <input type="number" id="valorSaque" placeholder="Valor do Saque">
+                <button onclick="sacar()" class="action-button">Sacar</button>
+            </div>
+            <div class="form-container" id="consultarSaldo">
+                <h2>Consultar Saldo</h2>
+                <input type="number" id="numeroContaSaldo" placeholder="Número da Conta">
+                <button onclick="consultarSaldo()" class="action-button">Consultar Saldo</button>
+            </div>
+            <div id="resultado" class="resultado"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Sistema Bancário. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
